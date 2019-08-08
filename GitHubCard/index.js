@@ -12,6 +12,33 @@ axios.get(`https://api.github.com/users/adriangarcia5`)
    Skip to Step 3.
 */
 
+/* Step 4: Pass the data received from Github into your function, 
+           create a new component and add it to the DOM as a child of .cards
+*/
+
+/* Step 5: Now that you have your own card getting added to the DOM, either 
+          follow this link in your browser https://api.github.com/users/<Your github name>/followers 
+          , manually find some other users' github handles, or use the list found 
+          at the bottom of the page. Get at least 5 different Github usernames and add them as
+          Individual strings to the friendsArray below.
+          
+          Using that array, iterate over it, requesting data for each user, creating a new card for each
+          user, and adding that card to the DOM.
+*/
+
+// const followersArray = [
+//   'drewgoenner',
+//   'H4rliquinn',
+//   'pusheadmetal',
+//   'deegrams221',
+//   'jaredkain',
+//   'otterspawdesign',
+//   'brandonharris177',
+//   'nomadkitty',
+//   'JaxAtwood',
+//   'allisonkydy',
+// ];
+
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
 
@@ -71,30 +98,3 @@ function createUsers(obj) {
 
 
 }
-
-/* Step 4: Pass the data received from Github into your function, 
-           create a new component and add it to the DOM as a child of .cards
-*/
-
-/* Step 5: Now that you have your own card getting added to the DOM, either 
-          follow this link in your browser https://api.github.com/users/<Your github name>/followers 
-          , manually find some other users' github handles, or use the list found 
-          at the bottom of the page. Get at least 5 different Github usernames and add them as
-          Individual strings to the friendsArray below.
-          
-          Using that array, iterate over it, requesting data for each user, creating a new card for each
-          user, and adding that card to the DOM.
-*/
-
-// const followersArray = [
-//   'drewgoenner',
-//   'H4rliquinn',
-//   'pusheadmetal',
-//   'deegrams221',
-//   'jaredkain',
-//   'otterspawdesign',
-//   'brandonharris177',
-//   'nomadkitty',
-//   'JaxAtwood',
-//   'allisonkydy',
-// ];
