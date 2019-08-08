@@ -105,7 +105,7 @@ function createUsers(obj) {
   profileLink.href = obj.html_url;
   profileLink.textContent = obj.html_url;
   followers.textContent = `Followers: ${obj.followers}`;
-  following.textContent = `Following: ${obj.followers}`;
+  following.textContent = `Following: ${obj.following}`;
   bio.textContent = `Bio: ${obj.bio}`;
 
     
