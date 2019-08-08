@@ -41,6 +41,37 @@ axios.get(`https://api.github.com/users/adriangarcia5`)
 */
 
 
+const cards = document.querySelector(username => {
+  axios.get(`https://api.github.com/users/${username}`)
+  .then(data => {
+    console.log('Profiles', data)
+    const userCard = createUsers(data.data)
+    cards.appendChild(userCard)
+  })
+  .catch(error => {
+    console.log('API ErroR', error)
+  })
+});
+
+//creating function and the elements
+function createUsers(obj) {
+  const card = doucment.createElement('div');
+  const image = document.createElement('img');
+  const cardInfo = document.createElement('div');
+  const name = document.createElement('h3');
+  const userName = document.createElement('p');
+  const location = document.createElement('p');
+  const profile = document.createElement('p');
+  const profileLink = document.createElement('a');
+  const followers = document.createElement('p');
+  const following = document.createElement('p');
+  const bio = document.createElement('p');
+  console.log(profileLink)
+
+
+
+}
+
 /* Step 4: Pass the data received from Github into your function, 
            create a new component and add it to the DOM as a child of .cards
 */
