@@ -27,13 +27,13 @@ axios.get(`https://api.github.com/users/adriangarcia5`)
 */
 
 const followersArray = [
+  'adriangarcia5',
   'drewgoenner',
-  'H4rliquinn',
   'pusheadmetal',
   'deegrams221',
   'jaredkain',
   'otterspawdesign',
-  'brandonharris177',
+  '1professionalusername',
   'nomadkitty',
   'JaxAtwood',
   'allisonkydy',
@@ -108,8 +108,19 @@ function createUsers(obj) {
   following.textContent = `Following: ${obj.following}`;
   bio.textContent = `Bio: ${obj.bio}`;
 
-    
-  
-  
+  //set the elements together
+  card.appendChild(image);
+  card.appendChild(cardInfo);
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(userName);
+  cardInfo.appendChild(location);
+  cardInfo.appendChild(profile);
+  profile.appendChild(profileLink);
+  cardInfo.appendChild(profile);
+  cardInfo.appendChild(followers);
+  cardInfo.appendChild(following);
+  cardInfo.appendChild(bio);
+
+  return card;
 }
 
