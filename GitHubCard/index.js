@@ -26,63 +26,40 @@ axios.get(`https://api.github.com/users/adriangarcia5`)
           user, and adding that card to the DOM.
 */
 
-// const followersArray = [
-//   'drewgoenner',
-//   'H4rliquinn',
-//   'pusheadmetal',
-//   'deegrams221',
-//   'jaredkain',
-//   'otterspawdesign',
-//   'brandonharris177',
-//   'nomadkitty',
-//   'JaxAtwood',
-//   'allisonkydy',
-// ];
+const followersArray = [
+  'drewgoenner',
+  'H4rliquinn',
+  'pusheadmetal',
+  'deegrams221',
+  'jaredkain',
+  'otterspawdesign',
+  'brandonharris177',
+  'nomadkitty',
+  'JaxAtwood',
+  'allisonkydy',
+];
 
-/* Step 3: Create a function that accepts a single object as its only argument,
-          Using DOM methods and properties, create a component that will return the following DOM element:
+const cards = document.querySelector('.cards')
 
-<div class="card">
-  <img src={image url of user} />
-  <div class="card-info">
-    <h3 class="name">{users name}</h3>
-    <p class="username">{users user name}</p>
-    <p>Location: {users location}</p>
-    <p>Profile:  
-      <a href={address to users github page}>{address to users github page}</a>
-    </p>
-    <p>Followers: {users followers count}</p>
-    <p>Following: {users following count}</p>
-    <p>Bio: {users bio}</p>
-  </div>
-</div>
+followersArray.forEach(username => {
+axios.get(`https://api.github.com/users/${username}`)
+.then(data => {
+  console.log('Profiles', data)
+  const userCard =createUsers(data.data)
+  cards.appendChild(userCard)
 
-*/
+})
+.catch(error => {
+  console.log (error)
+})
 
-/* List of LS Instructors Github username's: 
-  tetondan
-  dustinmyers
-  justsml
-  luishrd
-  bigknell
-*/
-
-
-const cards = document.querySelector(username => {
-  axios.get(`https://api.github.com/users/${username}`)
-  .then(data => {
-    console.log('Profiles', data)
-    const userCard = createUsers(data.data)
-    cards.appendChild(userCard)
-  })
-  .catch(error => {
-    console.log('API ErroR', error)
-  })
 });
 
-//creating function and the elements
+/*
+created function and elements
+*/
 function createUsers(obj) {
-  const card = doucment.createElement('div');
+  const card = document.createElement('div');
   const image = document.createElement('img');
   const cardInfo = document.createElement('div');
   const name = document.createElement('h3');
@@ -95,6 +72,11 @@ function createUsers(obj) {
   const bio = document.createElement('p');
   console.log(profileLink)
 
-
+  //set styles/class
+  card.classList.add('card');;
+  cardInfo.classList.add('card-info');
+  name.classList.add('name');
+  userName.classList.add('username');
 
 }
+
