@@ -78,5 +78,20 @@ function createUsers(obj) {
   name.classList.add('name');
   userName.classList.add('username');
 
+  //set the content
+  image.src = obj.avatar_url;
+  name.textContent = obj.name;
+  userName.textContent = obj.login;
+  location.textContent = `Location: ${obj.location}`;
+  profile.textContent = `Profile:`;
+  profileLink.href = obj.html_url;
+  profileLink.textContent = obj.html_url;
+  followers.textContent = `Followers: ${obj.followers}`;
+  following.textContent = `Following: ${obj.followers}`;
+  bio.textContent = `Bio: ${obj.bio}`;
+
+    
+  
+  
 }
 
