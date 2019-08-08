@@ -3,6 +3,8 @@
            https://api.github.com/users/<your name>
 */
 
+axios.get(`https://api.github.com/users/adriangarcia5`)
+
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
    data in order to use it to build your component function 
@@ -24,7 +26,18 @@
           user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+// const followersArray = [
+//   'drewgoenner',
+//   'H4rliquinn',
+//   'pusheadmetal',
+//   'deegrams221',
+//   'jaredkain',
+//   'otterspawdesign',
+//   'brandonharris177',
+//   'nomadkitty',
+//   'JaxAtwood',
+//   'allisonkydy',
+// ];
 
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
@@ -53,3 +66,5 @@ const followersArray = [];
   luishrd
   bigknell
 */
+
+
